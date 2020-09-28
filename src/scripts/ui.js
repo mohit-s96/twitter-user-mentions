@@ -36,7 +36,7 @@ class UI{
         document.querySelector('#message').innerText = '';
     }
     parseBody(data){
-        let match = /^@[a-zA-Z0-9_]{3,20}$/;
+        let match = /^[@#][a-zA-Z0-9_]{3,20}$/; 
         data = data.split(' ');
         let secCheck = data.map(x => {
             x = x.replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -44,17 +44,14 @@ class UI{
         });
         let newData = secCheck.map(x => {
             if(match.test(x)){
-                // console.log(x);
                 x = `<span class="match">${x}</span>`
                 return x;
-                // console.log(x);
             }
             else{
                 return x;
             }
         });
         data = newData.join(' ');
-        // console.log(data);
         return data;
     }
 }

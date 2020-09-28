@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "title": "user mentions",
+      "body": "hello @testuser",
+      "id": 1
+    },
+    {
+      "title": "valid mention check",
+      "body": "@user will work but @>user or @./user won't",
+      "id": 2
+    },
+    {
+      "title": "more rule checks",
+      "body": "similarly a username exceeding specified length rules won't work @usernamexxxxxxxxxxxxxxxx",
+      "id": 3
+    },
+    {
+      "title": "innerHTML",
+      "body": "since this input is a div, we use innerHTML for dynamic injection but a user can't write HTML tags and get them parsed. This is taken care of .\nfor eg..\n<span>Hello World</span> or <script>alert('Hello World')<script>\nwill not work while @user still does",
+      "id": 4
+    },
+    {
+      "title": "a hashtag check",
+      "body": "this is a #hashtag",
+      "id": 5
+    }
+  ]
+}
