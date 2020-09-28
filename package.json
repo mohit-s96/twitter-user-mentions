@@ -6,7 +6,8 @@
   "scripts": {
     "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/bundle.js",
     "build": "node_modules/.bin/webpack --mode production",
-    "serve": "webpack-dev-server --mode development"
+    "serve": "webpack-dev-server --mode development --disable-host-check",
+    "json:server": "json-server --watch api/db.json"
   },
   "author": "",
   "license": "ISC",
@@ -14,11 +15,19 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^4.2.2",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
 }

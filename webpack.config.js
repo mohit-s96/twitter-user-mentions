@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    entry: './src/index.js',
+    entry: ['babel-polyfill','./src/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist/assets'),
         filename: 'bundle.js'
@@ -19,6 +19,11 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             }
-        }]
+        },
+        {
+              test: /\.css$/,
+              use: ['style-loader', 'css-loader']   
+        }
+    ]
     }
 };
