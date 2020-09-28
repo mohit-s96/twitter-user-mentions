@@ -17,7 +17,7 @@
     },
     {
       "title": "innerHTML",
-      "body": "since this input is a div, we use innerHTML for dynamic injection but a user can't write HTML tags and get them parsed. This is taken care of .\nfor eg..\n<span>Hello World</span> or <script>alert('Hello World')<script>\nwill not work while @user still does",
+      "body": "since this input is a div, we use innerHTML for dynamic injection but a user can't write HTML tags and get them parsed. This is taken care of .\nfor eg..\n<span>Hello World</span> or <script>alert('Hello World')</script>\nwill not work while @user still does",
       "id": 4
     },
     {
