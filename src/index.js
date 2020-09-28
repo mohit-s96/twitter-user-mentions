@@ -7,22 +7,6 @@ let message = document.getElementById('message');
 document.addEventListener('DOMContentLoaded', fetchPosts);
 document.querySelector('.btn').addEventListener('click', addPost);
 
-
-
-// function removeDelete(e){
-//     console.log(e);
-//     if(e.target.nextElementSibling.classList.contains('active')){
-//         console.log('test');
-//     }
-//     else{
-//         const containers = document.querySelectorAll('.content');
-
-//         containers.forEach(container => {
-//             container.className = 'content';
-//         });
-//     }
-// }
-
 function addButton(){
     const containers = document.querySelectorAll('.dropdown');
     // console.log(containers);
